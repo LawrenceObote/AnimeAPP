@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import SearchAPI from './components/SearchAPI';
 
 function App() {
   return (
     <div className="App">
-
+      <SearchAPI />
     </div>
   );
 }

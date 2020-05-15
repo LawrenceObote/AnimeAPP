@@ -6,7 +6,8 @@ export default class SearchAPI extends Component {
         super(props)
 
         this.state = {
-            title: ''
+            title: '',
+            otherTitle: ''
         }
     }
 
@@ -18,6 +19,12 @@ export default class SearchAPI extends Component {
             .then((Response => {
                 console.log(Response.data.data[0].attributes.titles.en);
                 console.log(Response.data.data[0].attributes.titles.ja_jp);
+
+                this.setState({
+
+                    title: Response.data.data[0].attributes.titles.en,
+                    otherTitle: Response.data.data[0].attributes.titles.ja_jp
+                })
             }))
             .catch((error) => {
                 console.log(error);
@@ -28,7 +35,9 @@ export default class SearchAPI extends Component {
     render() {
         return (
             <div>
-
+                {this.state.title}
+                <br />
+                {this.state.otherTitle}
             </div>
         )
     }

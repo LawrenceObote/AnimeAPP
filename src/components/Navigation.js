@@ -3,20 +3,27 @@ import { Route, Switch, Link, BrowserRouter as Router } from 'react-router-dom';
 import Home from './Home';
 import Anime from './Anime';
 import Manga from './Manga';
+import '../App.css';
 
 function Navigation() {
 	return (
 		<Router>
 			<nav className="wrapper">
-				<ul className="navi">
+				<ul className="mota-nav">
 					<li>
-						<Link to="/"> Home </Link>
+						<Link className="text-white" to="/">
+							Home Page
+						</Link>
 					</li>
 					<li>
-						<Link to="/anime"> Anime </Link>
+						<Link className="text-white" to="/anime">
+							Anime
+						</Link>
 					</li>
 					<li>
-						<Link to="/manga"> Manga </Link>
+						<Link className="text-white" to="/manga">
+							Manga
+						</Link>
 					</li>
 				</ul>
 			</nav>
@@ -28,5 +35,4 @@ function Navigation() {
 		</Router>
 	);
 }
-
 export default Navigation;

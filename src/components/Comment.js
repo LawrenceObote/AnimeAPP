@@ -35,10 +35,12 @@ export default class CommentExampleComment extends Component {
     //     return num;
     // }
 
-    async getID() {
+     async getID() {
         try {
           const number = await axios.get(`https://animeapi-10ee6.firebaseio.com/number.json`);
+          console.log(number.data.num);
           this.setState({number: number.data.num})
+          console.log("woah",number.data.num);
           return number.data.num;
         } catch(e) {
           console.error(e);
@@ -48,14 +50,13 @@ export default class CommentExampleComment extends Component {
       async setID(){
         let data = {
             number: this.getID + 1,
-            num: this.getID + 1
+            num: this.state.num + 1
         }
-        axios.patch(`https://animeapi-10ee6.firebaseio.com/${this.state.number}.json`, data).then(response =>{
+        axios.patch(`https://animeapi-10ee6.firebaseio.com/${this.state.num}.json`, data).then(response =>{
         })
         this.setState({
             number: this.state.number + 1
         })
-        console.log(this.state.number);
         console.log("qqq", this.state.number);
       }
     
@@ -73,7 +74,8 @@ export default class CommentExampleComment extends Component {
             id: this.state.id,
             comment: this.state.comment
         }
-        axios.put(`https://animeapi-10ee6.firebaseio.com/${this.state.number}/comment.json`, dataComment).then(response =>{
+        console.log("argh", this.state.number)
+        axios.put(`https://animeapi-10ee6.firebaseio.com/${this.state.number}.json`, dataComment).then(response =>{
             // console.log(this.state.id);
             // console.log(response);
             // console.log(this.state.id);
@@ -111,9 +113,7 @@ export default class CommentExampleComment extends Component {
         try {
           const response = await axios.get(`https://animeapi-10ee6.firebaseio.com/comments/.json`);
         //   console.log("aaaa", response.data);
-          console.log(this.state.info);
           this.setState({info: [response.data]})
-          console.log(this.state.info);
           const commentsList = this.state.info.map(info => {
             
             return(
@@ -133,7 +133,7 @@ export default class CommentExampleComment extends Component {
 
       componentDidMount(){
           this.displayComments();
-          console.log("number", this.getID());
+          this.getID();
       }
 
     render() {

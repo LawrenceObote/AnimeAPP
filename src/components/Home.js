@@ -2,7 +2,6 @@ import React from 'react';
 import '../App.css';
 import axios from 'axios';
 import '../styles/Home.css';
-
 import Mashup from '../images/Mashup.png';
 
 class Home extends React.Component {
@@ -18,6 +17,7 @@ class Home extends React.Component {
 		this.getInfo = this.getInfo.bind(this);
 		this.randomCat = this.randomCat.bind(this);
 	}
+
 	async randomCat() {
 		try {
 			const getData = await axios.get(
@@ -25,7 +25,7 @@ class Home extends React.Component {
 			);
 
 			this.setState({
-				info: getData.data,
+				info: getData.data.data,
 			});
 		} catch (error) {
 			console.log(error);
@@ -52,7 +52,7 @@ class Home extends React.Component {
 				<div className="home-wrapper">
 					<form className="home-form" onSubmit={this.submitButton}>
 						<h3>
-							<small className="text-muted">Search Bar</small>
+							<small className="text-muted"> Search Bar </small>
 						</h3>
 						<input
 							className="home-text-field"
@@ -82,6 +82,7 @@ class Home extends React.Component {
 							<div className="home-response" key={index}>
 								<p> {response.name} </p>
 								<p> {response.id}</p>
+								<p> {response.synopsis}</p>
 							</div>
 						);
 					})}

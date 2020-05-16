@@ -51,7 +51,6 @@ class Home extends React.Component {
 	render() {
 		return (
 			<div>
-				<small className="text-muted"> Manga search by Category </small>
 				<div className="home-wrapper">
 					<form className="home-form" onSubmit={this.submitButton}>
 						<br />
@@ -62,6 +61,8 @@ class Home extends React.Component {
 							value={this.state.answers}
 							onChange={this.getInfo}
 						/>
+						<br />
+						<small className="text-muted"> Manga search by Category </small>
 
 						<br />
 						<input

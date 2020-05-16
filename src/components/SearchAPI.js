@@ -7,7 +7,8 @@ export default class SearchAPI extends Component {
 
         this.state = {
             title: '',
-            otherTitle: ''
+            otherTitle: '',
+            image: ''
         }
     }
 
@@ -19,11 +20,14 @@ export default class SearchAPI extends Component {
             .then((Response => {
                 console.log(Response.data.data[0].attributes.titles.en);
                 console.log(Response.data.data[0].attributes.titles.ja_jp);
+                console.log(Response.data.data[0].attributes);
+                console.log(Response.data.data[0].attributes.posterImage.original)
 
                 this.setState({
 
                     title: Response.data.data[0].attributes.titles.en,
-                    otherTitle: Response.data.data[0].attributes.titles.ja_jp
+                    otherTitle: Response.data.data[0].attributes.titles.ja_jp,
+                    image: Response.data.data[0].attributes.posterImage.original
                 })
             }))
             .catch((error) => {
@@ -38,6 +42,8 @@ export default class SearchAPI extends Component {
                 {this.state.title}
                 <br />
                 {this.state.otherTitle}
+                <br />
+                <img src={this.state.image}></img>
             </div>
         )
     }

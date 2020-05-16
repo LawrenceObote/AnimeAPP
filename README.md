@@ -48,4 +48,6 @@ Issues during production sourced from our initial API choice. We were having a h
 
 ## Wireframe
 
-[WF](/)
+![image](https://user-images.githubusercontent.com/61799909/82132188-1114d080-97ab-11ea-980c-5ba290e416f4.png)
+
+![image](https://user-images.githubusercontent.com/61799909/82132218-5b964d00-97ab-11ea-922f-d7a9e98ecfa4.png)

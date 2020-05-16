@@ -35,7 +35,9 @@ import react from 'react';
 ## Reflection
 
 Denisse - README.md, Routing, Home page
+
 Lawrence - Github leader, Comments Components
+
 Juan - Wireframe, Anime page
 
 This was a quick 4 day trio group project done by team Dj Lawjuan during our third module at Per Scholas. Our project goal included utilizing technologies learned up until this point while also gaining knowledge and usage of new packages/tools.

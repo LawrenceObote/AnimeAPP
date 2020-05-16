@@ -8,24 +8,27 @@
 #borderimg1 {
 	border: 20px solid transparent;
 	padding: 5px;
-	border-image: url(../images/Pikaborder.jpg) 33 round ;
+	border-image: url(../images/Pikaborder.jpg) 33 round;
 }
 
-
-.home-wrapper{
-    justify-content: space-evenly;
-    display: flex;
-        
+.home-wrapper {
+	justify-content: space-evenly;
+	display: flex;
 }
 
-.home-form{
-    
-    padding: 15px;
-    
+.home-form {
+	padding: 15px;
 }
 
-.text-button{
-    margin: 5px;
+.text-button {
+	margin: 5px;
 }
 
+.home-response {
+	color: white;
+    display: grid;
+    grid-template-columns : repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+	background-color: rgb(44, 169, 253);
+	padding: 45px;
+}
 

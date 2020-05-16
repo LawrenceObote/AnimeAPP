@@ -6,7 +6,7 @@
 	background-color: rgba(0, 0, 0, 0.911);
 	border: 25px solid transparent;
 	padding: 5px;
-	border-image: url(../images/Pikaborder.jpg) 150 round;
+	border-image: url(../images/Pikaborder.jpg) repeat 100 ;
 }
 
 .nav-wrapper {
@@ -14,14 +14,14 @@
 	background-size: 1400px 145px;
 	background-repeat: no-repeat;
 	height: 220px;
-	padding-top: 9%;
+	padding-top: 13%;
 }
 
 .nav {
 	display: flex;
 	list-style: none;
 	justify-content: space-evenly;
-	font-size: 20px;
+	font-size: 25px;
 }
 
 a:link {

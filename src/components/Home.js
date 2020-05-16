@@ -2,7 +2,6 @@ import React from 'react';
 import '../App.css';
 import axios from 'axios';
 import '../styles/Home.css';
-import Mashup from '../images/Mashup.png';
 
 class Home extends React.Component {
 	constructor(props) {
@@ -27,6 +26,7 @@ class Home extends React.Component {
 			this.setState({
 				info: getData.data.data,
 			});
+			console.log(this.state.info);
 		} catch (error) {
 			console.log(error);
 		}
@@ -52,7 +52,7 @@ class Home extends React.Component {
 				<div className="home-wrapper">
 					<form className="home-form" onSubmit={this.submitButton}>
 						<h3>
-							<small className="text-muted"> Search Bar </small>
+							<small className="text-muted"> Manga search by Category </small>
 						</h3>
 						<input
 							className="home-text-field"
@@ -80,9 +80,23 @@ class Home extends React.Component {
 					{this.state.info.map((response, index) => {
 						return (
 							<div className="home-response" key={index}>
-								<p> {response.name} </p>
-								<p> {response.id}</p>
-								<p> {response.synopsis}</p>
+								<img
+									className="manga-cover"
+									src={response.attributes.posterImage.small}
+									alt="Manga-Poster-Cover"
+								></img>
+                                <br/>
+								<h4 className="text-body">
+									Title : {response.attributes.canonicalTitle} <br />
+									Japenese Title : {response.attributes.titles.ja_jp}
+								</h4>
+								<p> Rating : {response.attributes.ageRating} </p>
+								<p>
+									Series Status : {response.attributes.status} <br />
+									Chapter Count : {response.attributes.chapterCount} <br />
+									Serialization : {response.attributes.serialization}
+								</p>
+								<p> {response.attributes.synopsis} </p>
 							</div>
 						);
 					})}

@@ -26,12 +26,12 @@
 }
 
 a:link {
-	color: white;
+	color: skyblue;
 	text-decoration: none;
 }
 
 a:visited {
-	color: skyblue;
+	color: red;
 }
 
 a:hover {

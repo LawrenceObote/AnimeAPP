@@ -3,15 +3,18 @@
 	min-height: 100vh;
 	text-align: center;
 	align-items: center;
-	background-color: black;
+	background-color: rgb(82, 176, 231);
+	border: 20px solid transparent;
+	padding: 5px;
+	border-image: url(../images/Pikaborder.jpg) 100 round;
 }
 
 .nav-wrapper {
 	background: url('../images/AnimeExtended3.png');
-	background-size: 1400px;
+	background-size: 1400px 145px;
 	background-repeat: no-repeat;
-    height: 250px;
-    padding-top: 10%;
+	height: 220px;
+	padding-top: 7%;
 }
 
 .nav {

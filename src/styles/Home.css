@@ -11,6 +11,21 @@
 	border-image: url(../images/Pikaborder.jpg) 33 round ;
 }
 
-.home-form{
+
+.home-wrapper{
+    justify-content: space-evenly;
     display: flex;
+        
 }
+
+.home-form{
+    
+    padding: 15px;
+    
+}
+
+.text-button{
+    margin: 5px;
+}
+
+

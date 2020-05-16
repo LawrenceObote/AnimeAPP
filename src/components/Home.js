@@ -11,7 +11,6 @@ class Home extends React.Component {
 		this.state = {
 			info: [],
 			search: false,
-			race: this.props.id,
 		};
 
 		this.clearButton = this.clearButton.bind(this);
@@ -22,10 +21,8 @@ class Home extends React.Component {
 	async randomCat() {
 		try {
 			const getData = await axios.get(
-				`https://kitsu.io/api/edge/manga?filter[categories]=horror`
+				`https://kitsu.io/api/edge/manga?filter[categories]=${this.state.answers}`
 			);
-
-			console.log(getData.data);
 
 			this.setState({
 				info: getData.data,
@@ -51,17 +48,15 @@ class Home extends React.Component {
 
 	render() {
 		return (
-			<div className="home-wrapper">
-				<div>
+			<div>
+				<div className="home-wrapper">
 					<form className="home-form" onSubmit={this.submitButton}>
 						<h3>
-							<small className="text-muted" id="borderimg1">
-								{' '}
-								Search Bar{' '}
-							</small>
+							<small className="text-muted">Search Bar</small>
 						</h3>
 						<input
-							className="text-field3"
+							className="home-text-field"
+							id="borderimg1"
 							type="text"
 							value={this.state.answers}
 							onChange={this.getInfo}

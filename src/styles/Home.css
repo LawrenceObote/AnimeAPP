@@ -1,5 +1,16 @@
 .App {
-    background-image: url('../images/HomeBackground.jpg');
-    background-repeat: no-repeat;
-    background-size: 100vw;
+	background-image: url('../images/Mashup4.png');
+	background-repeat: no-repeat;
+	/* background-size: 100vw; */
+	background-position: bottom;
+}
+
+#borderimg1 {
+	border: 20px solid transparent;
+	padding: 5px;
+	border-image: url(../images/Pikaborder.jpg) 33 round ;
+}
+
+.home-form{
+    display: flex;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 import axios from 'axios';
-import '../styles/Home.css'
+import '../styles/Home.css';
 
 import Mashup from '../images/Mashup.png';
 
@@ -53,14 +53,12 @@ class Home extends React.Component {
 		return (
 			<div className="home-wrapper">
 				<div>
-					<div className="home-img-wrapper">
-						{/* <img className="img" src={Mashup} alt="Anime"  /> */}
-						{/* <img className="mini-weedies2" src={mini2} alt="Yin Feeling" /> */}
-						{/* <img className="Canna" src={sativaplant} alt="Sativa Plant" /> */}
-					</div>
-					<form className="form-race" onSubmit={this.submitButton}>
+					<form className="home-form" onSubmit={this.submitButton}>
 						<h3>
-							<small className="text-muted">Search Bar</small>
+							<small className="text-muted" id="borderimg1">
+								{' '}
+								Search Bar{' '}
+							</small>
 						</h3>
 						<input
 							className="text-field3"
@@ -86,9 +84,9 @@ class Home extends React.Component {
 				<div>
 					{this.state.info.map((response, index) => {
 						return (
-							<div className="strain-race-results" key={index}>
-								<p> Name :{response.name} </p>
-								<p> Strain ID :{response.id}</p>
+							<div className="home-response" key={index}>
+								<p> {response.name} </p>
+								<p> {response.id}</p>
 							</div>
 						);
 					})}

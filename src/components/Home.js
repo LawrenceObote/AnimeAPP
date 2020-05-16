@@ -1,7 +1,7 @@
 import React from 'react';
-import '../App.css';
 import axios from 'axios';
 import '../styles/Home.css';
+import '../styles/App.css';
 import Pika from '../images/Pika.png';
 import umaru from '../images/umaru.png';
 
@@ -117,5 +117,4 @@ class Home extends React.Component {
 		);
 	}
 }
-
 export default Home;

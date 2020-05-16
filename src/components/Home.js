@@ -3,7 +3,7 @@ import '../App.css';
 import axios from 'axios';
 import '../styles/Home.css';
 import Pika from '../images/Pika.png';
-import Aggretsuko from '../images/Aggretsuko.png';
+import umaru from '../images/umaru.png';
 
 class Home extends React.Component {
 	constructor(props) {
@@ -51,9 +51,9 @@ class Home extends React.Component {
 	render() {
 		return (
 			<div>
-                <small className="text-muted"> Manga search by Category </small>
+				<small className="text-muted"> Manga search by Category </small>
 				<div className="home-wrapper">
-                    <form className="home-form" onSubmit={this.submitButton}>
+					<form className="home-form" onSubmit={this.submitButton}>
 						<br />
 						<input
 							className="home-text-field"
@@ -68,14 +68,16 @@ class Home extends React.Component {
 							className="text-button"
 							id="home-sumbit"
 							type="image"
-							src={Pika}
+							src={umaru}
+							alt="Umaru with a coke"
 							onClick={this.randomCat}
 						/>
 						<input
 							className="text-button"
 							id="home-clear"
 							type="image"
-							src={Aggretsuko}
+							src={Pika}
+							alt="Pikachu"
 							onClick={this.clearButton}
 						/>
 					</form>
@@ -95,7 +97,11 @@ class Home extends React.Component {
 									Title : {response.attributes.canonicalTitle} <br />
 									Japenese Title : {response.attributes.titles.ja_jp}
 								</h4>
-								<p> Rating : {response.attributes.ageRating} </p>
+								<p>
+									{' '}
+									Rating : {response.attributes.ageRating}
+									{response.attributes.volumeCount}
+								</p>
 								<p>
 									Series Status : {response.attributes.status} <br />
 									Chapter Count : {response.attributes.chapterCount} <br />

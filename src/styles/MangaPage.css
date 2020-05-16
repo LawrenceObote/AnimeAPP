@@ -3,10 +3,9 @@
 	padding: 5px;
 	border-image: url(../images/Pikaborder.jpg) 33 round;
 	width: 350px;
-	margin-left: 5px;
 }
 
-.home-wrapper {
+.manga-wrapper {
 	justify-content: space-evenly;
 	display: flex;
 }
@@ -16,10 +15,15 @@
 	height: 150px;
 }
 
-.home-response {
+
+.text-button1 {
+	outline: 0;
+	height: 150px;
+}
+.manga-response {
 	color: white;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
-	background-color: red;
+	background-color: rgb(44, 169, 253);
 	padding: 45px;
 }

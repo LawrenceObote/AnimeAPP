@@ -2,6 +2,8 @@ import React from 'react';
 import '../App.css';
 import axios from 'axios';
 import '../styles/Home.css';
+import Pika from '../images/Pika.png';
+import Aggretsuko from '../images/Aggretsuko.png';
 
 class Home extends React.Component {
 	constructor(props) {
@@ -49,11 +51,10 @@ class Home extends React.Component {
 	render() {
 		return (
 			<div>
+                <small className="text-muted"> Manga search by Category </small>
 				<div className="home-wrapper">
-					<form className="home-form" onSubmit={this.submitButton}>
-						<h3>
-							<small className="text-muted"> Manga search by Category </small>
-						</h3>
+                    <form className="home-form" onSubmit={this.submitButton}>
+						<br />
 						<input
 							className="home-text-field"
 							id="borderimg1"
@@ -61,18 +62,22 @@ class Home extends React.Component {
 							value={this.state.answers}
 							onChange={this.getInfo}
 						/>
+
+						<br />
 						<input
 							className="text-button"
-							type="submit"
+							id="home-sumbit"
+							type="image"
+							src={Pika}
 							onClick={this.randomCat}
 						/>
-						<button
+						<input
 							className="text-button"
-							type="button"
+							id="home-clear"
+							type="image"
+							src={Aggretsuko}
 							onClick={this.clearButton}
-						>
-							Clear
-						</button>
+						/>
 					</form>
 				</div>
 
@@ -85,7 +90,7 @@ class Home extends React.Component {
 									src={response.attributes.posterImage.small}
 									alt="Manga-Poster-Cover"
 								></img>
-                                <br/>
+								<br />
 								<h4 className="text-body">
 									Title : {response.attributes.canonicalTitle} <br />
 									Japenese Title : {response.attributes.titles.ja_jp}

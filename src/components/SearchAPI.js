@@ -5,10 +5,12 @@ export default class SearchAPI extends Component {
     constructor(props) {
         super(props)
 
+        // input takes in user input from a text input field and title takes the response from api
         this.state = {
             input: '',
             title: []
         }
+        // binds functions
         this.searchAdventure = this.searchAdventure.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -17,29 +19,28 @@ export default class SearchAPI extends Component {
 
 
     searchAdventure(e) {
+
         e.preventDefault()
+
         this.setState({
             input: e.target.value
 
         })
         console.log(this.state.input);
-
-
-
     }
+
 
     handleSubmit(e) {
         const endPoint = 'https://kitsu.io/api/edge/anime?filter[categories]=';
         console.log(this.state.input);
 
         axios.get(endPoint + this.state.input)
+
             .then((Response => {
                 console.log(Response.data.data)
                 this.setState({
                     title: Response.data.data
                 })
-                // [0].attributes.titles.en
-                // [0].attributes.titles.en
             }))
             .catch((error) => {
                 console.log(error);

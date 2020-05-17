@@ -17,7 +17,7 @@ export default class SearchAPI extends Component {
 
 
 
-
+    // function changes state to the user input
     searchAdventure(e) {
 
         e.preventDefault()
@@ -29,13 +29,16 @@ export default class SearchAPI extends Component {
         console.log(this.state.input);
     }
 
-
+    // function makes api call using axios
     handleSubmit(e) {
+        // end point stored in a const var
         const endPoint = 'https://kitsu.io/api/edge/anime?filter[categories]=';
         console.log(this.state.input);
 
+        // makes get request and concatinates input at the end of the endpoint. The user enters a catagory of Anime and is used as a param for the endpoint to satisfy a users specific request.
         axios.get(endPoint + this.state.input)
 
+            // returns a promise request and we set it as our state
             .then((Response => {
                 console.log(Response.data.data)
                 this.setState({

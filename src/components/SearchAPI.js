@@ -67,6 +67,7 @@ export default class SearchAPI extends Component {
                             <h2> {iterate.attributes.titles.en} </h2>
                             <img src={iterate.attributes.posterImage.original} />
                             <h2>{iterate.attributes.titles.ja_jp}</h2>
+                            <p> {iterate.attributes.synopsis} </p>
                         </div>
 
                     )

@@ -2,14 +2,18 @@
 import React from 'react';
 import './App.css';
 import Comment from './components/Comment';
+import firebase from './firebase'
 
 function App() {
+  const[comments, setComments] = React.useState([])
+  const[newCommentName, setNewCommentName] = React.useState()
+  
 //React Hooks
   React.useEffect(() => {
     const fetchData = async () => {
       const db = firebase.firestore()
       //snapshot
-      db.collection('comments').onSnapshot(() => {
+      db.collection('comments').onSnapshot((snapshot) => {
         const commentsData = []
         //... operator
         snapshot.forEach(doc => commentsData.push(({...doc.data(), id: doc.id})))

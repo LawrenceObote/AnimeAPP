@@ -3,8 +3,8 @@ import firebase from '../firebase'
 
 export const Comment = ({ comment }) => {
   //useState and variable declerations
-  const[name, setName] = React.useStat(comment.name);
-  
+  const[name, setName] = React.useState(comment.name);
+
   const onDelete = () => {
     const db = firebase.firestore()
     db.collection('comments').doc(comment.id).delete()
@@ -28,3 +28,5 @@ export const Comment = ({ comment }) => {
       </div>
   )
 }
+
+export default Comment

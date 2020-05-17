@@ -1,3 +1,4 @@
+**Changed "Search by Category" to "Search by Title"**
 Wireframe: ![](./wireframes/AnimePage.png)
 Wireframe: ![](./wireframes/MangaPage.png)
 

@@ -8,8 +8,10 @@ function App() {
   React.useEffect(() => {
     const fetchData = async () => {
       const db = firebase.firestore()
+      //snapshot
       db.collection('comments').onSnapshot(() => {
         const commentsData = []
+        //... operator
         snapshot.forEach(doc => commentsData.push(({...doc.data(), id: doc.id})))
         setComments(commentsData)
       })
@@ -27,6 +29,7 @@ function App() {
              onChange={e => setNewCommentName(e.target.value)}
       />
       <button onClick={onCreate}>Create</button>
+      {/* map */}
       {comments.map(comment => (
         <li key={comment.name}>{comment.name}
         <Comment comment={comment}/>

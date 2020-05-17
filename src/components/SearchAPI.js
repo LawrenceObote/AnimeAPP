@@ -11,14 +11,14 @@ export default class SearchAPI extends Component {
             title: []
         }
         // binds functions
-        this.searchAdventure = this.searchAdventure.bind(this);
+        this.handleUserInput = this.handleUserInput.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
 
 
     // function changes state to the user input
-    searchAdventure(e) {
+    handleUserInput(e) {
 
         e.preventDefault()
 
@@ -62,7 +62,7 @@ export default class SearchAPI extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         Category:
-                        <input type="text" value={this.state.input} onChange={this.searchAdventure} />
+                        <input type="text" value={this.state.input} onChange={this.handleUserInput} />
                     </label>
                     <input type="submit" value="Submit" />
                 </form>

@@ -9,7 +9,8 @@ export default class SearchAPI extends Component {
             input: '',
             title: []
         }
-
+        this.searchAdventure = this.searchAdventure.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
 
@@ -22,6 +23,9 @@ export default class SearchAPI extends Component {
 
         })
         console.log(this.state.input);
+
+
+
     }
 
     handleSubmit(e) {

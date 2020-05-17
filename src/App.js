@@ -4,6 +4,11 @@ import './App.css';
 import Comment from './components/Comment';
 
 function App() {
+
+  const onCreate = () =>{
+    const db = firebase.firestore()
+    db.collection('comments').add({name: newCommentName})
+  }
   return (
     <div className="App">
       <input value={newCommentName}

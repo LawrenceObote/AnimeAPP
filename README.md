@@ -1,4 +1,5 @@
 Wireframe: ![](./wireframes/AnimePage.png)
+Wireframe: ![](./wireframes/MangaPage.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

@@ -7,7 +7,7 @@ import firebase from './firebase'
 function App() {
   const[comments, setComments] = React.useState([])
   const[newCommentName, setNewCommentName] = React.useState()
-  
+
 //React Hooks
   React.useEffect(() => {
     const fetchData = async () => {
@@ -29,16 +29,18 @@ function App() {
   }
   return (
     <div className="App">
+      <ul>
       <input value={newCommentName}
              onChange={e => setNewCommentName(e.target.value)}
       />
       <button onClick={onCreate}>Create</button>
       {/* map */}
       {comments.map(comment => (
-        <li key={comment.name}>{comment.name}
+        <li key={comment.id}>
         <Comment comment={comment}/>
         </li> 
       ))}
+      </ul>
     </div>
   );
 }

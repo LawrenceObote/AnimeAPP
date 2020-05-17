@@ -47,7 +47,16 @@ export default class SearchAPI extends Component {
                     </label>
                     <input type="submit" value="Submit" />
                 </form>
+                {this.state.title.map((iterate) => {
+                    return (
+                        <div>
+                            <h2> {iterate.attributes.titles.en} </h2>
+                            <img src={iterate.attributes.posterImage.original} />
+                            <h2>{iterate.attributes.titles.ja_jp}</h2>
+                        </div>
 
+                    )
+                })}
                 {/*<br />
                 {this.state.otherTitle}
                 <br /> */}

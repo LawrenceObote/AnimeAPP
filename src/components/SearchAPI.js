@@ -6,44 +6,45 @@ export default class SearchAPI extends Component {
         super(props)
 
         this.state = {
-            title: '',
-            otherTitle: '',
-            image: ''
+            input: '',
+            title: []
         }
+
     }
 
-    componentDidMount() {
 
-        const endPoint = 'https://kitsu.io/api/edge/anime?filter[categories]=adventure';
 
-        axios.get(endPoint)
+    handleSubmit(e) {
+        const endPoint = 'https://kitsu.io/api/edge/anime?filter[categories]=';
+        console.log(this.state.input);
+
+        axios.get(endPoint + this.state.input)
             .then((Response => {
-                console.log(Response.data.data[0].attributes.titles.en);
-                console.log(Response.data.data[0].attributes.titles.ja_jp);
-                console.log(Response.data.data[0].attributes);
-                console.log(Response.data.data[0].attributes.posterImage.original)
-
+                console.log(Response.data.data)
                 this.setState({
-
-                    title: Response.data.data[0].attributes.titles.en,
-                    otherTitle: Response.data.data[0].attributes.titles.ja_jp,
-                    image: Response.data.data[0].attributes.posterImage.original
+                    title: Response.data.data
                 })
+                // [0].attributes.titles.en
+                // [0].attributes.titles.en
             }))
             .catch((error) => {
                 console.log(error);
             })
+
+        e.preventDefault();
     }
+
+
 
 
     render() {
         return (
             <div>
-                {this.state.title}
-                <br />
+
+                {/*<br />
                 {this.state.otherTitle}
-                <br />
-                <img src={this.state.image}></img>
+                <br /> */}
+                {/* <img src={this.state.image}></img> */}
             </div>
         )
     }

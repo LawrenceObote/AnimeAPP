@@ -32,7 +32,7 @@ export default class SearchAPI extends Component {
     // function makes api call using axios
     handleSubmit(e) {
         // end point stored in a const var
-        const endPoint = 'https://kitsu.io/api/edge/anime?filter[categories]=';
+        const endPoint = 'https://kitsu.io/api/edge/anime?filter[text]=';
         console.log(this.state.input);
 
         // makes get request and concatinates input at the end of the endpoint. The user enters a catagory of Anime and is used as a param for the endpoint to satisfy a users specific request.

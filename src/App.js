@@ -4,6 +4,18 @@ import './App.css';
 import Comment from './components/Comment';
 
 function App() {
+//React Hooks
+  React.useEffect(() => {
+    const fetchData = async () => {
+      const db = firebase.firestore()
+      db.collection('comments').onSnapshot(() => {
+        const commentsData = []
+        snapshot.forEach(doc => commentsData.push(({...doc.data(), id: doc.id})))
+        setComments(commentsData)
+      })
+    }
+    fetchData()
+  }, [])
 
   const onCreate = () =>{
     const db = firebase.firestore()

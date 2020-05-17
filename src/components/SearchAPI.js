@@ -40,6 +40,13 @@ export default class SearchAPI extends Component {
     render() {
         return (
             <div>
+                <form onSubmit={this.handleSubmit}>
+                    <label>
+                        Category:
+                        <input type="text" value={this.state.input} onChange={this.searchAdventure} />
+                    </label>
+                    <input type="submit" value="Submit" />
+                </form>
 
                 {/*<br />
                 {this.state.otherTitle}

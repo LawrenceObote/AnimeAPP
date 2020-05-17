@@ -14,6 +14,16 @@ export default class SearchAPI extends Component {
 
 
 
+
+    searchAdventure(e) {
+        e.preventDefault()
+        this.setState({
+            input: e.target.value
+
+        })
+        console.log(this.state.input);
+    }
+
     handleSubmit(e) {
         const endPoint = 'https://kitsu.io/api/edge/anime?filter[categories]=';
         console.log(this.state.input);

@@ -45,6 +45,7 @@ export default class SearchAPI extends Component {
                     title: Response.data.data
                 })
             }))
+            // catches any errors in the unfortunate event response doesn't return
             .catch((error) => {
                 console.log(error);
             })
@@ -65,6 +66,7 @@ export default class SearchAPI extends Component {
                     </label>
                     <input type="submit" value="Submit" />
                 </form>
+
                 {this.state.title.map((iterate) => {
                     return (
                         <div>
@@ -76,10 +78,6 @@ export default class SearchAPI extends Component {
 
                     )
                 })}
-                {/*<br />
-                {this.state.otherTitle}
-                <br /> */}
-                {/* <img src={this.state.image}></img> */}
             </div>
         )
     }

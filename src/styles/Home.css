@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 #borderimg1 {
 	border: 20px solid transparent;
 	padding: 5px;
 	border-image: url(../images/Pikaborder.jpg) 33 round;
-	width: 350px;
+	width: 10%;
 	margin-left: 5px;
 }
 
@@ -22,4 +23,8 @@
 	grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
 	background-color: red;
 	padding: 45px;
+}
+
+.search{
+	font-family: 'Lobster', cursive;
 }

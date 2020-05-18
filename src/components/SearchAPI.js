@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import '../styles/SearchAPI.css';
 
 export default class SearchAPI extends Component {
     constructor(props) {
@@ -69,10 +70,13 @@ export default class SearchAPI extends Component {
 
                 {this.state.title.map((iterate) => {
                     return (
-                        <div>
+                        <div className="blue">
                             <h2> {iterate.attributes.titles.en} </h2>
-                            <img src={iterate.attributes.posterImage.original} />
+                            <br></br>
+                            <img src={iterate.attributes.posterImage.small} />
+                            <br></br>
                             <h2>{iterate.attributes.titles.ja_jp}</h2>
+                            <br></br>
                             <p> {iterate.attributes.synopsis} </p>
                         </div>
 

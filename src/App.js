@@ -50,7 +50,7 @@ function App() {
              onChange={e => setNewCommentName(e.target.value)}
       />
       
-      <button className="button" id="create-button" onClick={onCreate}>Create</button>
+      <button className="button text-white" id="create-button" onClick={onCreate}>Create</button>
       {/* map */}
       {comments.map(comment => (
         <li id="list-comment" key={comment.time}>

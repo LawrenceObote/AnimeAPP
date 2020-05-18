@@ -77,10 +77,10 @@ class Home extends React.Component {
 							onChange={this.getInfo}
 						/>
 						<br />
-						<small className="text-muted">
+						<h3 className="text-white search">
 							{' '}
 							Anime & Manga search by Category{' '}
-						</small>
+						</h3>
 
 						<br />
 						<input

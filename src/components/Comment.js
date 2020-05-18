@@ -21,14 +21,21 @@ export const Comment = ({ comment }) => {
 
 
   return (
-      <div>
-        <input id="text-field" value={name} onChange={e => {
-          setName(e.target.value)}}/>
-          <button id="create-button" onClick={onUpdate}>Update</button>
-          <button id="delete-button" onClick={onDelete}>Delete</button>
-        
-
+    <div>
+      <div className="form-group">
+        <label for ="comment">Comment:</label>
+        <textarea class="form-control" rows="4" id="comment" value={name} onChange={e => {
+          setName(e.target.value)}}></textarea>
       </div>
+        
+      <div className="buttons">
+        
+          <button className="button" id="create-button" onClick={onUpdate}>Update</button>
+          <button className="button" id="delete-button" onClick={onDelete}>Delete</button>
+        
+      </div>
+      <br></br>
+  </div>
   )
 }
 

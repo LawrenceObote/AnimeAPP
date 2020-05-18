@@ -5,6 +5,7 @@ import Navigation from './components/Navigation';
 import './styles/App.css';
 import Comment from './components/Comment';
 import firebase from './firebase';
+import './styles/Comment.css';
 
 
 
@@ -48,10 +49,11 @@ function App() {
       <input id="new-comment-box" value={newCommentName}
              onChange={e => setNewCommentName(e.target.value)}
       />
-      <button id="create-button" onClick={onCreate}>Create</button>
+      
+      <button className="button" id="create-button" onClick={onCreate}>Create</button>
       {/* map */}
       {comments.map(comment => (
-        <li key={comment.time}>
+        <li id="list-comment" key={comment.time}>
         <Comment comment={comment}/>
         </li> 
       ))}

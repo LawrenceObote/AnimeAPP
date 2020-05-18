@@ -1,0 +1,26 @@
+.form-group{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.form-control{
+    width: 40%;
+    justify-content: center;
+    list-style: none;
+    text-decoration: none;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    margin: 0 auto;
+}
+
+.button{
+    background-color: #4cb7ea;
+    border: none;
+}

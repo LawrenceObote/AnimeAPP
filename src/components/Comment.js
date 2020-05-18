@@ -2,7 +2,7 @@ import React from 'react'
 import firebase from '../firebase'
 
 export const Comment = ({ comment }) => {
-  //useState and variable declerations
+  //useState allows use to useState in functional components
   const[name, setName] = React.useState(comment.name);
   const[time, setTime] = React.useState(comment.time);
 

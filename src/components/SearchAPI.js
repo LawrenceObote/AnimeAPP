@@ -61,23 +61,22 @@ export default class SearchAPI extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <label>
+                    <label id="label">
                         Category:
                         <input type="text" value={this.state.input} onChange={this.handleUserInput} />
                     </label>
-                    <input type="submit" value="Submit" />
+                    <input className="button" type="submit" value="Submit" />
                 </form>
 
                 {this.state.title.map((iterate) => {
                     return (
                         <div className="blue">
-                            <h2> {iterate.attributes.titles.en} </h2>
+                            <h2> {iterate.attributes.titles.en} <br></br>{iterate.attributes.titles.ja_jp}</h2>
                             <br></br>
-                            <img src={iterate.attributes.posterImage.small} />
-                            <br></br>
-                            <h2>{iterate.attributes.titles.ja_jp}</h2>
+                            <img className="image" src={iterate.attributes.posterImage.small} />
                             <br></br>
                             <p> {iterate.attributes.synopsis} </p>
+                            <br></br>
                         </div>
 
                     )

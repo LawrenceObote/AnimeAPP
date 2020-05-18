@@ -1,19 +1,13 @@
 
 import React from 'react';
-<<<<<<< HEAD
+import './App.css';
+import SearchAPI from './components/SearchAPI';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Navigation from './components/Navigation';
-
-function App() {
-	return (
-		<div className="App">
-			<Navigation />
-		</div>
-	);
-=======
-import './App.css';
 import Comment from './components/Comment';
 import firebase from './firebase'
+
+
 
 function App() {
   const[comments, setComments] = React.useState([])
@@ -49,6 +43,20 @@ function App() {
   }
   return (
     <div className="App">
+
+      <SearchAPI />
+    <ul>
+      <input value={newCommentName}
+             onChange={e => setNewCommentName(e.target.value)}
+      />
+      <button onClick={onCreate}>Create</button>
+      {/* map */}
+      {comments.map(comment => (
+        <li key={comment.time}>
+        <Comment comment={comment}/>
+        </li> 
+      ))}
+      </ul>
       <ul>
       <input value={newCommentName}
              onChange={e => setNewCommentName(e.target.value)}
@@ -61,9 +69,10 @@ function App() {
         </li> 
       ))}
       </ul>
+
     </div>
   );
->>>>>>> 68b0d7b5baefac1ab4edffecb99f75b2d080876a
+
 }
 
 export default App;

@@ -44,7 +44,7 @@ class Manga extends React.Component {
 	}
 
 	clearButton() {
-		this.setState({ getId: '', search: false });
+		this.setState({ answers: '', search: false });
 	}
 
 	render() {

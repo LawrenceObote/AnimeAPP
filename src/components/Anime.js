@@ -1,11 +1,8 @@
 import React from 'react';
+import '../styles/AnimePage.css';
 
 function Anime() {
-	return (
-		<div>
-			<h1> Anime component </h1>
-		</div>
-	);
+	return <h1> yo </h1>;
 }
 
 export default Anime;

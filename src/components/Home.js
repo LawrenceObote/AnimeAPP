@@ -22,12 +22,12 @@ class Home extends React.Component {
 
 	async randomCat() {
 		try {
-			const [getData, getAnimeData] = await Promise.all([
-				axios.get(
-					`https://kitsu.io/api/edge/manga?filter[categories]=${this.state.answers}`
-				),
+			const [getAnimeData, getData] = await Promise.all([
 				axios.get(
 					`https://kitsu.io/api/edge/anime?filter[categories]=${this.state.answers}`
+				),
+				axios.get(
+					`https://kitsu.io/api/edge/manga?filter[categories]=${this.state.answers}`
 				),
 			]);
 
@@ -37,10 +37,10 @@ class Home extends React.Component {
 
 			this.setState({
 				info: getAnimeData.data.data,
-			});
-			this.setState({
+
 				info2: getData.data.data,
 			});
+
 			console.log(this.state.info);
 			console.log(getData);
 			console.log(getAnimeData);
@@ -60,7 +60,7 @@ class Home extends React.Component {
 	}
 
 	clearButton() {
-		this.setState({ getId: '', search: false });
+		this.setState({ search: false, answers: '' });
 	}
 
 	render() {
@@ -77,7 +77,10 @@ class Home extends React.Component {
 							onChange={this.getInfo}
 						/>
 						<br />
-						<small className="text-muted"> Manga search by Category </small>
+						<small className="text-muted">
+							{' '}
+							Anime & Manga search by Category{' '}
+						</small>
 
 						<br />
 						<input
@@ -104,6 +107,44 @@ class Home extends React.Component {
 						return (
 							<div className="home-response" key={index}>
 								<img
+									className="anime-cover"
+									src={response.attributes.posterImage.small}
+									alt="Anime-Poster-Cover"
+								></img>
+								<br />
+								<h4 className="text-body">
+									Title : {response.attributes.canonicalTitle} <br />
+									Japenese Title : {response.attributes.titles.ja_jp}
+								</h4>
+
+								<p>
+									Series Status : {response.attributes.status}
+									<br />
+									Start of Series : {response.attributes.startDate}
+									<br />
+									End of Series : {response.attributes.endDate}
+									<br />
+									Type : {response.type}
+								</p>
+
+								<p>
+									Rating : {response.attributes.ageRating}
+									<br />
+									Rating Guide : {response.attributes.ageRatingGuide}
+									<br />
+									Episodes Count : {response.attributes.episodeCount}
+								</p>
+								<p> {response.attributes.synopsis} </p>
+							</div>
+						);
+					})}
+				</div>
+
+				<div>
+					{this.state.info2.map((response, index) => {
+						return (
+							<div className="home-response" key={index}>
+								<img
 									className="manga-cover"
 									src={response.attributes.posterImage.small}
 									alt="Manga-Poster-Cover"
@@ -115,12 +156,16 @@ class Home extends React.Component {
 								</h4>
 								<p>
 									Rating : {response.attributes.ageRating}
+									<br />
 									Volume Count : {response.attributes.volumeCount}
+									<br />
 									Type : {response.type}
 								</p>
 								<p>
-									Series Status : {response.attributes.status} <br />
-									Chapter Count : {response.attributes.chapterCount} <br />
+									Series Status : {response.attributes.status}
+									<br />
+									Chapter Count : {response.attributes.chapterCount}
+									<br />
 									Serialization : {response.attributes.serialization}
 								</p>
 								<p> {response.attributes.synopsis} </p>

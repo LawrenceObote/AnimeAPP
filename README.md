@@ -1,68 +1,53 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Anime Manga Paradox
 
-## Available Scripts
+Anime Manga Paradox was designed for the Anime and Manga loving community!
 
-In the project directory, you can run:
+Upon visiting AMP’s homepage, Fanatics can generate a random Anime/Manga based on Category. If a broader search is desired then visiting either the Anime or Manga page will give you just that!
 
-### `npm start`
+Have an opinion that needs sharing? Our comment section will be your new best friend!
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Any of these options will include a picture, information on said inquiry and of course inherited coolness (I mean it is Anime we are talking about)!
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Installation
 
-### `npm test`
+Clone down this repository. You will need Node, and Npm installed globally on your machine.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You will also need to install and import Axios, Firebase, React, React-router-dom, and Bootstrap.
 
-### `npm run build`
+Installation:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm install
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```
+npm install axios
+npm install react
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
+Etc
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Usage
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```javascript
+import react from 'react';
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Reflection
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Denisse - README.md, Routing, Home page
 
-## Learn More
+Lawrence - Github leader, Comments Components
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Juan - Wireframe, Anime page
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This was a quick 4 day trio group project done by team Dj Lawjuan during our third module at Per Scholas. Our project goal included utilizing technologies learned up until this point while also gaining knowledge and usage of new packages/tools.
 
-### Code Splitting
+Technologies implemented in this project are React, React-Router, Axios. Also JavaScript, JSX, Firebase, Bootstrap, and CSS. We utilized create-react-app due to ease of usage and time effectiveness.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Issues during production sourced from our initial API choice. We were having a hard time understanding how to access this specific API.
 
-### Analyzing the Bundle Size
+## Wireframe
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+![image](https://user-images.githubusercontent.com/61799909/82132188-1114d080-97ab-11ea-980c-5ba290e416f4.png)
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![image](https://user-images.githubusercontent.com/61799909/82132218-5b964d00-97ab-11ea-922f-d7a9e98ecfa4.png)

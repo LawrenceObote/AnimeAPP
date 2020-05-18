@@ -1,5 +1,3 @@
-# Anime Manga Paradox
-
 Anime Manga Paradox was designed for the Anime and Manga loving community!
 
 Upon visiting AMP’s homepage, Fanatics can generate a random Anime/Manga based on Category. If a broader search is desired then visiting either the Anime or Manga page will give you just that!

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Switch, Link, BrowserRouter as Router } from 'react-router-dom';
 import Home from './Home';
-import Anime from './Anime';
 import Manga from './Manga';
+import SearchAPI from './SearchAPI';
 import '../styles/Navigation.css';
 
 function Navigation() {
@@ -23,7 +23,7 @@ function Navigation() {
 			</nav>
 			<Switch>
 				<Route exact path="/" component={Home}></Route>
-				<Route path="/anime" component={Anime}></Route>
+				<Route path="/anime" component={SearchAPI}></Route>
 				<Route path="/manga" component={Manga}></Route>
 			</Switch>
 		</Router>

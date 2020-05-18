@@ -2,9 +2,11 @@
 import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Navigation from './components/Navigation';
-import './App.css';
+import './styles/App.css';
 import Comment from './components/Comment';
 import firebase from './firebase';
+
+
 
 function App() {
   const[comments, setComments] = React.useState([])
@@ -41,6 +43,7 @@ function App() {
   return (
     <div className="App">
       <Navigation />
+
       <ul>
       <input value={newCommentName}
              onChange={e => setNewCommentName(e.target.value)}
@@ -53,6 +56,7 @@ function App() {
         </li> 
       ))}
       </ul>
+
     </div>
   );
 }

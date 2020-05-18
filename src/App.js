@@ -45,10 +45,10 @@ function App() {
       <Navigation />
 
       <ul>
-      <input value={newCommentName}
+      <input id="new-comment-box" value={newCommentName}
              onChange={e => setNewCommentName(e.target.value)}
       />
-      <button onClick={onCreate}>Create</button>
+      <button id="create-button" onClick={onCreate}>Create</button>
       {/* map */}
       {comments.map(comment => (
         <li key={comment.time}>

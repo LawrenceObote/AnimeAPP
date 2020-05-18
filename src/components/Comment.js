@@ -22,10 +22,10 @@ export const Comment = ({ comment }) => {
 
   return (
       <div>
-        <input value={name} onChange={e => {
+        <input id="text-field" value={name} onChange={e => {
           setName(e.target.value)}}/>
-          <button onClick={onUpdate}>Update</button>
-          <button onClick={onDelete}>Delete</button>
+          <button id="create-button" onClick={onUpdate}>Update</button>
+          <button id="delete-button" onClick={onDelete}>Delete</button>
         
 
       </div>

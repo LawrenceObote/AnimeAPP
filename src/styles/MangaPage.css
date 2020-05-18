@@ -17,12 +17,25 @@
 
 .text-button1 {
 	outline: 0;
-	height: 120px;
+	height: 130px;
 }
 .manga-response {
 	color: white;
+	font-size: 20px;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr, 1fr));
 	background-color: rgb(44, 169, 253);
 	padding: 45px;
+}
+
+.manga-cover {
+	justify-self: center;
+}
+
+.text-body{
+	color:white;
+}
+
+.text-b{
+	color:white;
 }

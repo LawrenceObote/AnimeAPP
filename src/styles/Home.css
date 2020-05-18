@@ -8,23 +8,34 @@
 }
 
 .home-wrapper {
-	justify-content: space-evenly;
+	justify-content: center;
 	display: flex;
 }
 
 .text-button {
 	outline: 0;
 	height: 150px;
+	margin: auto 0;
 }
 
 .home-response {
 	color: white;
+	font-size: 20px;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
-	background-color: red;
+	grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr, 1fr));
+	background-color: rgb(44, 169, 253);
 	padding: 45px;
 }
 
-.search{
+.search {
 	font-family: 'Lobster', cursive;
+}
+
+.manga-cover,
+.anime-cover {
+	justify-self: center;
+}
+
+h1{
+	color:white;
 }

@@ -1,31 +1,37 @@
-.blue{
-    color: white;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr, 1fr));
-    background-color: rgb(44, 169, 253);
+.blue {
+	color: white;
+	font-size: 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr, 1fr));
+	background-color: rgb(44, 169, 253);
 }
 
-.image{
-    justify-self: center;
+.image {
+	justify-self: center;
 }
 
-.button{
-    margin-left: 10px;
-    background-color: rgb(44, 169, 253);
-    color: white;
+.button {
+	margin-left: 10px;
+	background-color: rgb(44, 169, 253);
+	color: white;
 }
 
-#label{
-    color: white;
-
+#label {
+	color: white;
 }
 
-.text-submit{
-    display: flex;
-    flex-direction: column;
-
+.text-submit {
+	display: flex;
+	flex-direction: column;
 }
 
-h3{
-    font-family: 'Lobster', cursive;
+h3 {
+	font-family: 'Lobster', cursive;
+}
+
+#search-anime {
+	border: 20px solid transparent;
+	padding: 5px;
+	border-image: url(../images/Pikaborder.jpg) 33 round;
+	width: 350px;
 }

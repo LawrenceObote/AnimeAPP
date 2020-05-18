@@ -1,4 +1,6 @@
-Anime Manga Paradox was designed for the Anime and Manga loving community!
+## Anime Manga Paradox
+
+Anime Manga Paradox (AMP!) was designed for the Anime and Manga loving community!
 
 Upon visiting AMP’s homepage, Fanatics can generate a random Anime/Manga based on Category. If a broader search is desired then visiting either the Anime or Manga page will give you just that!
 
@@ -32,17 +34,17 @@ import react from 'react';
 
 ## Reflection
 
-Denisse - README.md, Routing, Home page
+Denisse - README.md, Routing, Home page and Manga
 
-Lawrence - Github leader, Comments Components
+Lawrence - Github leader, Comments Component
 
 Juan - Wireframe, Anime page
 
-This was a quick 4 day trio group project done by team Dj Lawjuan during our third module at Per Scholas. Our project goal included utilizing technologies learned up until this point while also gaining knowledge and usage of new packages/tools.
+This was a quick 4 day trio group project done by team Dj Lawjuan during our third module at Per Scholas. Our project goal included utilizing technologies learned up until this point, while also gaining knowledge and usage of new packages/tools.
 
-Technologies implemented in this project are React, React-Router, Axios. Also JavaScript, JSX, Firebase, Bootstrap, and CSS. We utilized create-react-app due to ease of usage and time effectiveness.
+Technologies implemented in this project are React, React-Router, Axios. Also JavaScript, JSX, Firebase, Bootstrap, Semantic UI, and CSS. We utilized create-react-app due to ease of usage and time effectiveness.
 
-Issues during production sourced from our initial API choice. We were having a hard time understanding how to access this specific API.
+Issues during production sourced from our initial API choice. We were having a hard time understanding how to access this specific API. Firebase was self-taught in order to get the comment section to work correctly.
 
 ## Wireframe
 

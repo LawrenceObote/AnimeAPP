@@ -106,16 +106,17 @@ class Home extends React.Component {
 					{this.state.info.map((response, index) => {
 						return (
 							<div className="home-response" key={index}>
+								<h1 className="text-body">
+									Title : {response.attributes.canonicalTitle} <br />
+									Japenese Title : {response.attributes.titles.ja_jp}
+								</h1>
+								<br></br>
 								<img
 									className="anime-cover"
 									src={response.attributes.posterImage.small}
 									alt="Anime-Poster-Cover"
 								></img>
 								<br />
-								<h4 className="text-body">
-									Title : {response.attributes.canonicalTitle} <br />
-									Japenese Title : {response.attributes.titles.ja_jp}
-								</h4>
 
 								<p>
 									Series Status : {response.attributes.status}
@@ -157,7 +158,6 @@ class Home extends React.Component {
 								<p>
 									Rating : {response.attributes.ageRating}
 									<br />
-									Volume Count : {response.attributes.volumeCount}
 									<br />
 									Type : {response.type}
 								</p>
@@ -165,8 +165,6 @@ class Home extends React.Component {
 									Series Status : {response.attributes.status}
 									<br />
 									Chapter Count : {response.attributes.chapterCount}
-									<br />
-									Serialization : {response.attributes.serialization}
 								</p>
 								<p> {response.attributes.synopsis} </p>
 							</div>

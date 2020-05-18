@@ -10,6 +10,7 @@ class Home extends React.Component {
 		super(props);
 		this.state = {
 			info: [],
+			info2: [],
 			search: false,
 		};
 
@@ -21,14 +22,28 @@ class Home extends React.Component {
 
 	async randomCat() {
 		try {
-			const getData = await axios.get(
-				`https://kitsu.io/api/edge/manga?filter[categories]=${this.state.answers}`
-			);
+			const [getData, getAnimeData] = await Promise.all([
+				axios.get(
+					`https://kitsu.io/api/edge/manga?filter[categories]=${this.state.answers}`
+				),
+				axios.get(
+					`https://kitsu.io/api/edge/anime?filter[categories]=${this.state.answers}`
+				),
+			]);
+
+			// const getData = await axios.get(
+			// `https://kitsu.io/api/edge/manga?filter[categories]=${this.state.answers}`
+			// );
 
 			this.setState({
-				info: getData.data.data,
+				info: getAnimeData.data.data,
+			});
+			this.setState({
+				info2: getData.data.data,
 			});
 			console.log(this.state.info);
+			console.log(getData);
+			console.log(getAnimeData);
 		} catch (error) {
 			console.log(error);
 		}
@@ -99,9 +114,9 @@ class Home extends React.Component {
 									Japenese Title : {response.attributes.titles.ja_jp}
 								</h4>
 								<p>
-									{' '}
 									Rating : {response.attributes.ageRating}
-									{response.attributes.volumeCount}
+									Volume Count : {response.attributes.volumeCount}
+									Type : {response.type}
 								</p>
 								<p>
 									Series Status : {response.attributes.status} <br />

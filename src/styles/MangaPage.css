@@ -17,7 +17,7 @@
 
 .text-button1 {
 	outline: 0;
-	height: 150px;
+	height: 120px;
 }
 .manga-response {
 	color: white;
@@ -26,5 +26,3 @@
 	background-color: rgb(44, 169, 253);
 	padding: 45px;
 }
-
-

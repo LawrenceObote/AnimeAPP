@@ -50,7 +50,6 @@ class Manga extends React.Component {
 	render() {
 		return (
 			<div>
-				<small className="text-muted"> Manga search </small>
 				<div className="manga-wrapper">
 					<form className="manga-form" onSubmit={this.submitButton}>
 						<br />
@@ -61,6 +60,7 @@ class Manga extends React.Component {
 							value={this.state.answers}
 							onChange={this.getInfo}
 						/>
+						<h3 className="text-white">Manga Search</h3>
 
 						<br />
 						<input
@@ -86,17 +86,38 @@ class Manga extends React.Component {
 					{this.state.info.map((response, index) => {
 						return (
 							<div className="manga-response" key={index}>
+								<h1 className="text-white text-b">
+									Title : {response.attributes.canonicalTitle}
+								</h1>
+								<h1 className="text-white text-b">
+									Japenese Title : {response.attributes.titles.ja_jp}
+								</h1>
+								<br></br>
 								<img
 									className="manga-cover"
 									src={response.attributes.posterImage.small}
 									alt="Manga-Poster-Cover"
 								></img>
 								<br />
+								<p> Rated : {response.attributes.ageRating} 
+								<br />
+								Rating : {response.attributes.averageRating}
+								</p>
+								<br></br>
+								<br></br>
+								<p>
+									Series Status : {response.attributes.status}
+									<br></br>
+									Start Date : {response.attributes.startDate}
+									<br></br>
+									End Date : {response.attributes.endDate}
+								</p>
+								<br></br>
 								<h4 className="text-body">
-									Title : {response.attributes.canonicalTitle} <br />
-									Japenese Title : {response.attributes.titles.ja_jp}
+									Volume Count : {response.attributes.volumeCount} <br />
+									Serialization : {response.attributes.serialization}
 								</h4>
-								<p> Rating : {response.attributes.ageRating} </p>
+								<br></br>
 								<p> {response.attributes.synopsis} </p>
 							</div>
 						);

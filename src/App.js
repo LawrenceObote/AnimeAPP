@@ -9,13 +9,14 @@ function App() {
   const[newCommentName, setNewCommentName] = React.useState()
 
 //React Hooks
+//useEffect allows us to run some additional code when the components are mounted or updated. (after every render)
   React.useEffect(() => {
     const fetchData = async () => {
       const db = firebase.firestore()
-      //snapshot
-      db.collection('comments').onSnapshot((snapshot) => {
+      //snapshot is a document listener. Everytime the document is changed a new snapshot is taken.
+      db.collection('comments').orderBy('time', 'desc').onSnapshot((snapshot) => {
         const commentsData = []
-        //... operator
+        //... adds the new documents to the commentsData array
         snapshot.forEach(doc => commentsData.push(({...doc.data(), id: doc.id})))
         setComments(commentsData)
       })
@@ -23,9 +24,17 @@ function App() {
     fetchData()
   }, [])
 
+
+
   const onCreate = () =>{
-    const db = firebase.firestore()
-    db.collection('comments').add({name: newCommentName})
+    const db = firebase.firestore();
+    //add function creates a new document inside of the comments collection
+    db.collection('comments').add({
+      name: newCommentName,
+      time : Date.now()
+    });
+
+
   }
   return (
     <div className="App">
@@ -36,7 +45,7 @@ function App() {
       <button onClick={onCreate}>Create</button>
       {/* map */}
       {comments.map(comment => (
-        <li key={comment.id}>
+        <li key={comment.time}>
         <Comment comment={comment}/>
         </li> 
       ))}

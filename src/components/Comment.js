@@ -4,6 +4,7 @@ import firebase from '../firebase'
 export const Comment = ({ comment }) => {
   //useState and variable declerations
   const[name, setName] = React.useState(comment.name);
+  const[time, setTime] = React.useState(comment.time);
 
   const onDelete = () => {
     const db = firebase.firestore()
@@ -12,7 +13,9 @@ export const Comment = ({ comment }) => {
 
   const onUpdate = () => {
     const db = firebase.firestore()
-    //set function
+    //set function takes the old document and updates it with the new info
+    //... inserts the old info into a new array
+
     db.collection('comments').doc(comment.id).set({...comment, name})
   }
 

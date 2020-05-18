@@ -59,14 +59,14 @@ export default class SearchAPI extends Component {
 
     render() {
         return (
-            <div>
+            <div className="text-submit">
+                <h3 className="text-white" >Anime Search</h3>
+                <div>
                 <form onSubmit={this.handleSubmit}>
-                    <label id="label">
-                        Category:
                         <input type="text" value={this.state.input} onChange={this.handleUserInput} />
-                    </label>
                     <input className="button" type="submit" value="Submit" />
                 </form>
+                </div>
 
                 {this.state.title.map((iterate) => {
                     return (

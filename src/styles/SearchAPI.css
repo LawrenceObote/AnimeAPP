@@ -17,5 +17,15 @@
 
 #label{
     color: white;
-    
+
+}
+
+.text-submit{
+    display: flex;
+    flex-direction: column;
+
+}
+
+h3{
+    font-family: 'Lobster', cursive;
 }

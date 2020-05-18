@@ -1,0 +1,25 @@
+#borderimg1 {
+	border: 20px solid transparent;
+	padding: 5px;
+	border-image: url(../images/Pikaborder.jpg) 33 round;
+	width: 350px;
+	margin-left: 5px;
+}
+
+.home-wrapper {
+	justify-content: space-evenly;
+	display: flex;
+}
+
+.text-button {
+	outline: 0;
+	height: 150px;
+}
+
+.home-response {
+	color: white;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+	background-color: red;
+	padding: 45px;
+}

@@ -1,0 +1,28 @@
+#borderimg1 {
+	border: 20px solid transparent;
+	padding: 5px;
+	border-image: url(../images/Pikaborder.jpg) 33 round;
+	width: 350px;
+}
+
+.manga-wrapper {
+	justify-content: space-evenly;
+	display: flex;
+}
+
+.text-button {
+	outline: 0;
+	height: 150px;
+}
+
+.text-button1 {
+	outline: 0;
+	height: 120px;
+}
+.manga-response {
+	color: white;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+	background-color: rgb(44, 169, 253);
+	padding: 45px;
+}

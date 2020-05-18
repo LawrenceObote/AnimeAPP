@@ -1,0 +1,42 @@
+.App {
+	min-width: 100vw;
+	min-height: 100vh;
+	text-align: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.911);
+	border: 35px solid transparent;
+	padding: 5px;
+	border-image: url(../images/Pikaborder.jpg) 100 repeat;
+}
+
+.nav-wrapper {
+	background: url('../images/AnimeExtended3.png');
+	background-size: 1350px 145px;
+	background-repeat: no-repeat;
+	height: 220px;
+	padding-top: 9%;
+}
+
+.nav {
+	display: flex;
+	list-style: none;
+	justify-content: space-evenly;
+	font-size: 25px;
+}
+
+a:link {
+	color: skyblue;
+	text-decoration: none;
+}
+
+a:visited {
+	color: red;
+}
+
+a:hover {
+	color: silver;
+}
+
+a:active {
+	color: gold;
+}

@@ -45,6 +45,21 @@ This was a quick 4 day trio group project done by team Dj Lawjuan during our thi
 Technologies implemented in this project are React, React-Router, Axios. Also JavaScript, JSX, Firebase, Bootstrap, Semantic UI, and CSS. We utilized create-react-app due to ease of usage and time effectiveness.
 
 Issues during production sourced from our initial API choice. We were having a hard time understanding how to access this specific API. Firebase was self-taught in order to get the comment section to work correctly.
+## References
+
+https://www.youtube.com/watch?v=yyo_TcZCrS4&t=847s
+
+https://www.youtube.com/watch?v=cb8H_hp10rc
+
+https://reactjs.org/docs/hooks-state.html
+
+https://reactjs.org/docs/hooks-effect.html
+
+https://stackoverflow.com/questions/47474522/firestore-difference-between-set-and-add
+
+https://javascript.info/promise-chaining
+
+https://stackoverflow.com/questions/36113367/how-to-make-image-buttons-in-jsx
 
 ## Wireframe
 

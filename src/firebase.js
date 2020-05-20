@@ -2,7 +2,8 @@ import * as firebase from 'firebase';
 import 'firebase/firestore';
 
 const config = {
-    apiKey: process.env.REACT_APP_API_KEY,
+    apiKey: "AIzaSyB2hkUFtksw22B3utBWl4v9NaSfqlt77eM"
+    ,
     authDomain: "animeapi-10ee6.firebaseapp.com",
     databaseURL: "https://animeapi-10ee6.firebaseio.com",
     projectId: "animeapi-10ee6",

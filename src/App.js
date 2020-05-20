@@ -8,7 +8,6 @@ import firebase from './firebase';
 import './styles/Comment.css';
 
 
-
 function App() {
   const[comments, setComments] = React.useState([])
   const[newCommentName, setNewCommentName] = React.useState()
